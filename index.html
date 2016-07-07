@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Coffee-App</title>
+  </head>
+  <body ng-app="app" ng-controller="MainController">
+    <div class="container-fluid">
+      <div class="row" id="logo-bar">
+        <div class="col col-md-2">
+          <img src="images/dc-roasters.png">
+        </div>
+          <div class="col col-md-10"></div>
+      </div>
+      <div class="row" id="nav">
+        <div class="col col-md-12 text-center">
+          <a href="#home">1.Home</a>
+          <a href="#options">2.Options</a>
+          <a href="#delivery">3.Delivery</a>
+          <a href="#payment">4.Payment</a>
+        </div>
+      </div>
+      <ng-view></ng-view>
+    </div>
+
+  <script src="angular.js"></script>
+  <!-- <script src="ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-cookies.js"></script> -->
+  <script src="angular-route.js"></script>
+  <script src="script.js"></script>
+  </body>
+</html>

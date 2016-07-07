@@ -1,0 +1,132 @@
+body {
+  background-color: #EAE8E2;
+}
+
+#logo-bar {
+  background: #243E39;
+}
+
+#nav {
+  background-color: gray;
+
+}
+
+#nav a {
+  padding: 3%;
+  font-size: 1.5em;
+}
+
+#first-image {
+  background-image: url("../images/coffee.jpg");
+  background-size: cover;
+  background-position: 80% 75%;
+}
+#first-portion {
+  margin-left: 5%;
+}
+
+#first-portion h2 {
+  margin-top: 10%;
+}
+
+#first-portion h5 {
+  margin-bottom: 10%;
+}
+
+#second-image {
+  background-image: url("../images/coffee-bags.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+
+#second-image h4 {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+#second-image p {
+  margin-bottom: 10%;
+  margin-left: 5%;
+}
+
+#grower {
+  border: 8px solid white;
+  width: 80%;
+  transform: rotate(-8deg);
+  margin-top: 15%;
+  margin-left: 10%;
+  margin-bottom: 15%;
+}
+#third-portion {
+  margin-top: 5%;
+}
+
+#third-portion h4, p {
+  margin-left: 20%;
+}
+
+#third-image {
+  background-image: url("../images/cup-steam.jpg");
+  background-size: cover;
+  background-position: top;
+  color: white;
+}
+
+
+#third-image h4 {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+#third-image p {
+  margin-bottom: 10%;
+  margin-left: 5%;
+}
+
+#fourth-portion {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+button {
+  color: white;
+  background: #243E39;
+}
+#our-story {
+  background: white;
+  color: black;
+}
+
+#delivery-form {
+  margin-top: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 5%;
+}
+#login {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 2%;
+  background-color: #EAE8E2;
+}
+#login h2 {
+  color: #243E39;
+}
+
+#login-form {
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+#login-hr {
+  border-color: #243E39;
+}
+
+#login-row {
+  background: white;
+}
