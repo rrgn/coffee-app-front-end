@@ -1,38 +1,54 @@
 <div class="row">
   <div class="col col-md-12">
     <h2 class="text-center">Tell us what you want!</h2>
-    <div>
+    <div class="col-md-4 col-md-offset-2 text-center package-box">
       <h3>Individual Package</h3>
-      <h6>For those who drink alone</h6>
+      <h4>For those who drink alone</h4>
       <img src="images/solo-drinker.jpg">
-      <div>
-        <h6>Cups</h6>
-        <h6>Price per cup:</h6>
-        <h6>Total:</h6>
-        <h6>Grind-type:</h6>
-      </div>
-      <div>
-        <h6>14</h6>
-        <h6>$0.50</h6>
-        <h6>$7.00</h6>
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Dropdown
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">Extra Coarse</a></li>
-            <li><a href="#">Coarse</a></li>
-            <li><a href="#">Medium-Coarse</a></li>
-            <li><a href="#">Medium-Fine</a></li>
-            <li><a href="#">Fine</a></li>
-            <li><a href="#">Extra-Fine</a></li>  
-          </ul>
+      <div class="option-values">
+        <div class="values-left">
+          <h4>Cups</h4>
+          <h4>Price per cup:</h4>
+          <h4>Total:</h4>
+          <h4>Grind-type:</h4>
+        </div>
+        <div class="values-right">
+          <h4>14</h4>
+          <h4>$0.50</h4>
+          <h4>$7.00</h4>
+          <div class="option-dropdown">
+            <select ng-model="grindType">
+              <option ng-repeat="grind in grinds"  value="{{grind}}">{{grind}}</option>
+
+            </select>
+          </div>
+          <button type="button" name="button" class="btn" ng-click="makeOrder(14)">Order</button>
         </div>
       </div>
     </div>
-    <div>
-
+    <div class="col-md-4 col-md-offset-1 text-center package-box">
+      <h3>Family Package</h3>
+      <h4>For those who drink together</h4>
+      <img src="images/coffee-drinkers.jpg">
+      <div class="option-values text-center">
+        <div class="values-left">
+          <h4>Cups</h4>
+          <h4>Price per cup:</h4>
+          <h4>Total:</h4>
+          <h4>Grind-type:</h4>
+        </div>
+        <div class="values-right">
+          <h4>40</h4>
+          <h4>$0.45</h4>
+          <h4>$18.00</h4>
+          <div class="option-dropdown">
+            <select ng-model="grindType">
+              <option ng-repeat="grind in grinds" value="{{grind}}">{{grind}}</option>
+            </select>
+          </div>
+          <button type="button" name="button" class="btn" ng-click="makeOrder(40)">Order</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

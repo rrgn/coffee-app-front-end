@@ -130,3 +130,51 @@ button {
 #login-row {
   background: white;
 }
+#register {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 2%;
+  background-color: #EAE8E2;
+}
+#register h1 {
+  color: #243E39;
+}
+
+#register-form {
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+#register hr {
+  border-color: #243E39;
+}
+
+#register-row {
+  background: white;
+}
+
+.option-values {
+  display: flex;
+  margin-left: 15%;
+}
+.values-left{
+  margin-right: 1%;
+  text-align: right;
+}
+.values-right  {
+  text-align: left;
+  margin-left: 4%;
+}
+
+.package-box {
+  box-shadow: 0 0 30px gray;
+  background-color: white;
+}
+
+.package-box img {
+  width: 100%;
+}

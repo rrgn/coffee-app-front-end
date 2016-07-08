@@ -3,11 +3,13 @@ var app = angular.module('app', ['ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider
   .when('/home', {
-    templateUrl: 'home.html'
+    templateUrl: 'home.html',
+    controller: 'MainController'
   })
 
   .when('/options', {
-    templateUrl: 'options.html'
+    templateUrl: 'options.html',
+    controller: 'OptionsController'
   })
 
   .when('/delivery', {
@@ -37,4 +39,30 @@ app.config(function($routeProvider) {
 
 app.controller('MainController', function($scope) {
 
+});
+
+app.controller('OptionsController', function($scope, grindOps) {
+  $scope.makeOrder = function(qty) {
+    return {
+      qty: qty,
+      grindType: $scope.grindType
+    },
+    console.log('inside scope makeOrder', $scope.grindType);
+  };
+  grindOps.getGrindOptions(function(data) {
+    $scope.grinds = data;
+    console.log(data);
+  });
+});
+
+app.factory('grindOps', function($http) {
+  return {
+    getGrindOptions: function(callback) {
+      $http({
+        url: "http://localhost:8080/options"
+      }).success(function(data){
+        callback(data);
+      });
+    }
+  };
 });
