@@ -178,3 +178,7 @@ button {
 .package-box img {
   width: 100%;
 }
+
+.payment-form {
+  display: flex;
+}

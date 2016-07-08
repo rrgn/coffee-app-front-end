@@ -1,34 +1,34 @@
 <div class="row">
   <div class="col-md-12">
   <h3 class="text-center">Please enter your shipping information</h3>
-  <form id="delivery-form">
+  <form id="delivery-form" ng-submit="deliverySubmit()">
   <fieldset class="form-group">
     <label for="formGroupExampleInput">Full Name</label>
-    <input type="text" class="form-control"  placeholder="Full Name">
+    <input type="text" class="form-control"  placeholder="Full Name" ng-model="fullName">
   </fieldset>
   <fieldset class="form-group">
     <label for="formGroupExampleInput2">Address Line 1</label>
-    <input type="text" class="form-control"  placeholder="Address Line 1">
+    <input type="text" class="form-control"  placeholder="Address Line 1" ng-model="address1">
   </fieldset>
   <fieldset class="form-group">
     <label for="formGroupExampleInput2">Address Line 2</label>
-    <input type="text" class="form-control"  placeholder="Address Line 2">
+    <input type="text" class="form-control"  placeholder="Address Line 2" ng-model="address2">
   </fieldset>
   <fieldset class="form-group">
     <label for="formGroupExampleInput2">City</label>
-    <input type="text" class="form-control" placeholder="City">
+    <input type="text" class="form-control" placeholder="City" ng-model="city">
   </fieldset>
   <fieldset class="form-group">
     <label for="formGroupExampleInput2">State</label>
-    <input type="text" class="form-control" placeholder="State">
+    <input type="text" class="form-control" placeholder="State" ng-model="state">
   </fieldset>
   <fieldset class="form-group">
     <label for="formGroupExampleInput2">Zip Code</label>
-    <input type="text" class="form-control"  placeholder="Zip Code">
+    <input type="text" class="form-control"  placeholder="Zip Code" ng-model="zipCode">
   </fieldset>
   <fieldset class="form-group">
     <label for="formGroupExampleInput2">Delivery Date</label>
-    <input type="text" class="form-control" placeholder="Delivery Date">
+    <input type="text" class="form-control" placeholder="Delivery Date" ng-model="deliveryDate">
   </fieldset>
   <button class="btn">Submit</button>
 </form>
