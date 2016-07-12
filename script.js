@@ -71,6 +71,7 @@ app.controller('OptionsController', function($scope, grindOps, $location, postOr
   // $scope.token = $cookies.get('token');
   $scope.makeOrder = function(qty, total) {
     totalPrice = total * 20 * 100;
+    console.log(totalPrice);
     order.options = {
       qty: qty,
       grindType: $scope.grindType,
@@ -154,7 +155,6 @@ app.controller('OptionsController', function($scope, grindOps, $location, postOr
       amount: amount
     });
   };
-  totalPrice = 0;
 }); //end of options controller
 
 //register user
