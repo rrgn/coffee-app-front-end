@@ -14,6 +14,7 @@ body {
 #nav a {
   padding: 3%;
   font-size: 1.5em;
+  color: black;
 }
 
 #first-image {
@@ -92,6 +93,9 @@ body {
 button {
   color: white;
   background: #243E39;
+}
+button:focus {
+  outline: 0 !important;
 }
 #our-story {
   background: white;
@@ -179,6 +183,7 @@ button {
   width: 100%;
 }
 
-.payment-form {
-  display: flex;
+th {
+  color: white;
+  background-color: #243E39;
 }

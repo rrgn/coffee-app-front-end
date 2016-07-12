@@ -15,16 +15,16 @@
           <div class="col col-md-10">
             <button type="button" name="button" class="btn pull-right" ng-click="logout()">Logout</button>
             <a href="#login"><button type="button" name="button" class="btn pull-right" ng-hide="checkIfLoggedIn()">Login</button></a>
-            <a href="#register"><button type="button" name="button" class="btn pull-right">Register</button></a>
+            <a href="#register"><button type="button" name="button" class="btn pull-right" ng-hide="checkIfLoggedIn()">Register</button></a>
           </div>
       </div>
       <div class="row" id="nav">
-        <div class="col col-md-12 text-center">
-          <a href="#home">1.Home</a>
-          <a href="#options">2.Options</a>
-          <a href="#delivery">3.Delivery</a>
-          <a href="#payment">4.Payment</a>
-        </div>
+        <ul class="nav nav-tabs nav-justified">
+          <li role="presentation"><a href="#home">Home</a></li>
+          <li role="presentation"><a href="#options">Options</a></li>
+          <li role="presentation"><a href="#delivery">Delivery</a></li>
+          <li role="presentation"><a href="#payment">Payment</a></li>
+        </ul>
       </div>
       <ng-view></ng-view>
     </div>

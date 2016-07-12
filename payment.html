@@ -1,92 +1,72 @@
 <div class="row">
   <div class="col-md-12">
     <h2 class="text-center">Payment</h2>
-    <div class="col-md-offset-4 col-md-4">
-    <h2 class="text-center">Choices (Edit)</h2>
-    <div class="payment-form">
-      <div>
-        <p>
-          Grind
-          <br>
-          Frequency of Delivery
-          <br>
-          Coffee in Pounds
-        </p>
+    <div class="col-md-4"></div>
+      <div class="col-md-4 table-responsive">
+        <table class="table table-striped">
+          <th class="text-center" colspan="3">Choices (Edit)</th>
+          <tr>
+            <td>Grind</td>
+            <td>{{order.options.grindType}}</td>
+          </tr>
+          <tr>
+            <td>Frequency of Delivery</td>
+            <td>Weekly</td>
+          </tr>
+          <tr>
+            <td>Coffee in Pounds</td>
+            <td>0.35</td>
+          </tr>
+          <th class="text-center" colspan="3">Delivery Information (Edit)</th>
+          <tr>
+            <td>Full Name</td>
+            <td>{{order.address.name}}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>{{order.address.address1}}</td>
+          </tr>
+          <tr>
+            <td>Address 2</td>
+            <td>{{order.address.address2}}</td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td>{{order.address.city}}</td>
+          </tr>
+          <tr>
+            <td>State</td>
+            <td>{{order.address.state}}</td>
+          </tr>
+          <tr>
+            <td>Zip Code</td>
+            <td>{{order.address.zipCode}}</td>
+          </tr>
+          <tr>
+            <td>Delivery Date</td>
+            <td>{{order.address.deliveryDate}}</td>
+          </tr>
+          <th class="text-center" colspan="3">Current Charge</th>
+          <tr>
+            <td>Quantity</td>
+            <td>0.35 * 20</td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td>FREE FOREVER!!!</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>7</td>
+          </tr>
+        </table>
+        <button type="button" name="button" class="btn" ng-click="pay()">
+          Pay
+        </button>
+        <button type="button" name="button" class="btn">
+          Cancel
+        </button>
       </div>
-      <div>
-        <p>
-          {{order.options.grindType}}
-          <br>
-          Weekly
-          <br>
-          0.35
-        </p>
-      </div>
-    </div>
-    <h2 class="text-center">Delivery Information (Edit)</h2>
-    <div class="payment-form">
-      <div>
-        <p>
-          Full Name
-          <br>
-          Address
-          <br>
-          Address 2
-          <br>
-          City
-          <br>
-          State
-          <br>
-          Zip Code
-          <br>
-          Delivery Date
-        </p>
-      </div>
-      <div>
-        <p>
-          {{order.address.fullName}}
-          <br>
-          {{order.address.address1}}
-          <br>
-          {{order.address.address2}}
-          <br>
-          {{order.address.city}}
-          <br>
-          {{order.address.state}}
-          <br>
-          {{order.address.zipCode}}
-          <br>
-          {{order.address.deliveryDate}}
-        </p>
-      </div>
-    </div>
-    <h2 class="text-center">Current Charge</h2>
-    <div class="payment-form">
-      <div>
-        <p>
-          Quantity
-          <br>
-          Shipping
-          <br>
-          Total
-        </p>
-      </div>
-      <div>
-        <p>
-          0.35 x $20.00/lb = $7.00
-          <br>
-          FREE!
-          <br>
-          $7.00
-        </p>
-      </div>
-    </div>
-    <button type="button" name="button" class="btn" ng-click="pay()">
-      Pay
-    </button>
-    <button type="button" name="button" class="btn">
-      Cancel
-    </button>
-    </div> <!-- col 4 end -->
+    <div class="col-md-4"></div>
   </div>
 </div>
