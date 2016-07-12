@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="style.css">
     <title>Coffee-App</title>
   </head>
-  <body ng-app="app">
+  <body ng-app="app" ng-controller="MainController">
     <div class="container-fluid">
       <div class="row" id="logo-bar">
         <div class="col col-md-2">
           <img src="images/dc-roasters.png">
         </div>
-          <div class="col col-md-10"></div>
+          <div class="col col-md-10">
+            <button type="button" name="button" class="btn pull-right" ng-click="logout()">Logout</button>
+            <a href="#login"><button type="button" name="button" class="btn pull-right" ng-hide="checkIfLoggedIn()">Login</button></a>
+            <a href="#register"><button type="button" name="button" class="btn pull-right">Register</button></a>
+          </div>
       </div>
       <div class="row" id="nav">
         <div class="col col-md-12 text-center">
@@ -26,8 +30,50 @@
     </div>
 
   <script src="angular.js"></script>
-  <!-- <script src="ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-cookies.js"></script> -->
+  <script src="angular-cookies.js"></script>
   <script src="angular-route.js"></script>
   <script src="script.js"></script>
+  <script src="jquery.js"></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <!-- stripe functionality -->
+  <!-- <script>
+    function pay() {
+      // Creates a CC handler which could be reused.
+      var amount = 999;
+      var handler = StripeCheckout.configure({
+        // my testing public publishable key
+        key: 'pk_test_0NjfAqyuhKFGHUb79RkAog3P',
+        locale: 'auto',
+        // once the credit card is validated, this function will be called
+        token: function(token) {
+          // Make the request to the backend to actually make a charge
+          // This is the token representing the validated credit card
+          var tokenId = token.id;
+          $.ajax({
+            url: 'http://localhost:8080/charge',
+            method: 'POST',
+            data: {
+              amount: amount,
+              token: tokenId
+            }
+          }).then(function(data) {
+            console.log('Charge:', data);
+            console.log('doesnt matter');
+            $scope.payOrder();
+            alert('You were charged $' + (data.charge.amount / 100));
+          });
+        }
+      });
+      // open the handler - this will open a dialog
+      // with a form with it to prompt for credit card
+      // information from the user
+      handler.open({
+        name: 'Debugschool',
+        description: '2 widgets',
+        amount: amount
+      });
+    }
+
+  </script> -->
   </body>
 </html>
